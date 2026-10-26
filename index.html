@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>noSQL School</title>
+  <meta name="description" content="Aprenda MongoDB em 4 semanas, com atividades práticas executadas no navegador.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="noSQL School — início"><span class="logo">🌱</span><span>noSQL <b>School</b></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#/" data-nav="home">Início</a>
+      <a href="#/simulado" data-nav="simulado">Simulado</a>
+      <a href="#/revisao" data-nav="revisao">Revisão</a>
+    </nav>
+    <div class="tools">
+      <span class="pill" id="goal-pill" title="Meta diária de estudo">🎯 0/10 min</span>
+      <span class="pill" id="streak-pill" title="Dias seguidos estudando">🔥 0</span>
+      <span class="timer"><button class="btn sm" id="timer-btn" title="Timer opcional de sessão">⏱ 10:00</button><button class="btn ghost sm" id="timer-reset" aria-label="Reiniciar timer">↺</button></span>
+      <button class="btn sm" id="dataset-btn" title="Ver dataset atual">📊 <span class="hide-sm">Dataset</span></button>
+      <button class="btn ghost sm" id="theme-btn" aria-label="Alternar tema">🌙</button>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <button class="fab" id="fab" aria-label="Abrir dataset">📊</button>
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Dataset atual">
+    <div class="drawer-head"><h2>Dataset — Cultiva+</h2><button class="btn ghost sm" id="drawer-close" aria-label="Fechar">✕</button></div>
+    <div id="drawer-body"></div>
+  </aside>
+  <div id="toasts" aria-live="polite"></div>
+
+  <noscript>Esta aplicação precisa de JavaScript.</noscript>
+  <script src="vendor/mingo.min.js"></script>
+  <script src="js/data/datasets.js"></script>
+  <script src="js/data/lessons.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
